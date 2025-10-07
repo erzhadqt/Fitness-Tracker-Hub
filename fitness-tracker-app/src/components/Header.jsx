@@ -1,8 +1,8 @@
-import "../assets/CSS/header.css";
+
 
 const Header = () => {
     return (
-        <header className="Header">
+        <header className="w-full bg-gradient-to-r from-red-600 to-black text-center text-3xl font-bold py-4 text-white">
             <h1>FITNESS TRACKER HUB</h1>
         </header>
     )
