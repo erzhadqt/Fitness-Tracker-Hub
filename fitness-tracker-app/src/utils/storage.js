@@ -1,7 +1,13 @@
 const STORAGE = "workouts";
 
 export const getWorkouts = () => {
-    return JSON.parse(localStorage.getItem(STORAGE)) || [];
+    const data = localStorage.getItem(STORAGE);
+    if (!data) return [];
+    try {
+        return JSON.parse(data);
+    } catch {
+        return [];
+    }
 }
 
 export const saveWorkouts = (workouts) => {

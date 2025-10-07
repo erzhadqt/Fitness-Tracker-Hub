@@ -1,9 +1,12 @@
+
+
 export const WorkoutData = [
   {
     id: 1,
     name: "Morning Cardio",
     type: "cardio",
     description: "30 minutes of running and jumping rope.",
+    imagePath: "/images/morningCardio.jpg",
     logs: [
       { day: "today", duration: "30 min", calories: 250 },
       { day: "yesterday", duration: "25 min", calories: 220 },
@@ -14,6 +17,7 @@ export const WorkoutData = [
     name: "Upper Body Strength",
     type: "strength",
     description: "Push-ups, bench press, and pull-ups.",
+    imagePath: "/images/upperBody.webp",
     logs: [
       { day: "today", reps: 50, sets: 5 },
       { day: "yesterday", reps: 40, sets: 4 },
@@ -24,6 +28,7 @@ export const WorkoutData = [
     name: "Yoga Flexibility",
     type: "cardio",
     description: "Stretching and breathing exercises.",
+    imagePath: "/images/yogaFlexi.jpg",
     logs: [
       { day: "today", duration: "45 min" },
       { day: "yesterday", duration: "30 min" },
@@ -34,6 +39,7 @@ export const WorkoutData = [
     name: "Leg Day",
     type: "strength",
     description: "Squats, lunges, and deadlifts.",
+    imagePath: "/images/legWorkout.webp",
     logs: [
       { day: "today", sets: 4, reps: 12 },
       { day: "yesterday", sets: 3, reps: 10 },
@@ -44,6 +50,7 @@ export const WorkoutData = [
     name: "HIIT Session",
     type: "cardio",
     description: "High intensity interval training (burpees, sprints, mountain climbers).",
+    imagePath: "/images/hiitWorkout.jpg",
     logs: [
       { day: "today", duration: "20 min", calories: 300 },
       { day: "yesterday", duration: "15 min", calories: 250 },
@@ -54,6 +61,7 @@ export const WorkoutData = [
     name: "Core Blast",
     type: "strength",
     description: "Planks, crunches, leg raises.",
+    imagePath: "/images/coreWorkout.avif",
     logs: [
       { day: "today", sets: 5, reps: 20 },
       { day: "yesterday", sets: 4, reps: 15 },
@@ -64,6 +72,7 @@ export const WorkoutData = [
     name: "Cycling Outdoors",
     type: "cardio",
     description: "Biking around the park or on the road.",
+    imagePath: "/images/cyclingIndoors.jpg",
     logs: [
       { day: "today", duration: "40 min", distance: "15 km" },
       { day: "yesterday", duration: "30 min", distance: "10 km" },
@@ -74,6 +83,7 @@ export const WorkoutData = [
     name: "Chest & Triceps",
     type: "strength",
     description: "Bench press, dips, and dumbbell flys.",
+    imagePath: "/images/chestTriceps.webp",
     logs: [
       { day: "today", sets: 4, reps: 12 },
       { day: "yesterday", sets: 3, reps: 10 },
@@ -84,6 +94,7 @@ export const WorkoutData = [
     name: "Swimming Laps",
     type: "cardio",
     description: "Freestyle and breaststroke laps at the pool.",
+    imagePath: "/images/swimmingLaps.jpg",
     logs: [
       { day: "today", duration: "30 min", laps: 20 },
       { day: "yesterday", duration: "25 min", laps: 15 },
@@ -94,6 +105,7 @@ export const WorkoutData = [
     name: "Full Body Circuit",
     type: "strength",
     description: "Combination of squats, push-ups, burpees, and kettlebell swings.",
+    imagePath: "/images/fullBody.jpg",
     logs: [
       { day: "today", rounds: 3, duration: "25 min" },
       { day: "yesterday", rounds: 2, duration: "20 min" },
