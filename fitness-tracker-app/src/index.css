@@ -4,5 +4,7 @@
 @tailwind utilities;
 
 body {
-  @apply bg-white font-sans box-border;
+  @apply bg-white dark:bg-black font-sans box-border;
+  
 }
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
