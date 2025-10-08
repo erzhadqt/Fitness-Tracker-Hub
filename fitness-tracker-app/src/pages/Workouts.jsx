@@ -2,12 +2,6 @@ import React from 'react';
 import { useSearchParams, Link } from 'react-router-dom';
 import { getWorkouts } from '../utils/storage';
 
-
-
-// Pictures
-
-
-
 const Workouts = () => {
     const [searchParams, setSearchParams] = useSearchParams();
     const q = searchParams.get("q") || "";
@@ -55,8 +49,8 @@ const Workouts = () => {
                       className="w-99 h-40 rounded mb-3"
                     />
                   <Link to={`/workouts/${w.id}`}>
-                      <span className="font-extrabold text-lg">{w.name}</span>
-                      <span className="font-semibold text-base"> ({w.type})</span>
+                      <span className="font-bold text-lg">{w.name}</span>
+                      <span className="font-semibold text-base"> ({w.type.toUpperCase()})</span>
                     </Link>
                 </li>
                 

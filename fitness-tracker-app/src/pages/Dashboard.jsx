@@ -8,10 +8,7 @@ import Workouts from './Workouts';
 const Dashboard = ({title}) => {
   return (
     <div className="navLinks">
-        {/* <nav>
-          <NavLink to="/" end></NavLink>
-        </nav> */}
-        <h1 className="font-arial text-2xl font-medium text-center mt-2">{title}</h1>
+        <h1 className="font-arial text-4xl font-medium text-center mt-10 mb-15">{title}</h1>
       <UserTheme />
       <Workouts />
     </div>

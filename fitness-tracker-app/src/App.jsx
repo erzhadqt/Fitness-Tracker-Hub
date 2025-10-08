@@ -32,9 +32,8 @@ function App() {
             <Routes>
                 <Route path="/" element={<Dashboard title="Welcome to Fitness Tracker Hub!" />} />
                 <Route path="/workouts" element={<Workouts />} />
-                <Route path="/workouts/:id" element={<WorkoutDetails />}>
-                    <Route path="logs" element={<WorkoutLogs/>} />
-                </Route>
+                <Route path="/workouts/:id" element={<WorkoutDetails />}></Route>
+                <Route path="/workouts/:id/logs" element={<WorkoutLogs />} />
                 <Route path="/profiles" element={<Profile />} />
             </Routes>
         </>
