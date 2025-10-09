@@ -9,7 +9,7 @@ const Profile = ({ userTheme }) => {
 
   return (
     <div className="m-5">
-      <NavLink to={`/workouts${search}`} className="flex items-center gap-2 text-gray-700 hover:text-blue-500 transition dark:text-white">
+      <NavLink to={`/${search}`} className="flex items-center gap-2 text-gray-700 hover:text-blue-500 transition dark:text-white">
             <FaArrowLeft className="w-6 h-6" />
             <span className="font-bold text-xl flex items-center gap-2 text-gray-700 hover:text-blue-500 transition dark:text-white">Back</span>
             </NavLink>

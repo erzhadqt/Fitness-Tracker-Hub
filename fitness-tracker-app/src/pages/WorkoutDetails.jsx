@@ -1,4 +1,5 @@
 import React from 'react'
+import Dashboard from './Dashboard';
 import { useParams, Outlet, useLocation } from 'react-router-dom'
 import { WorkoutData } from '../data/WorkoutData'
 import { FaArrowLeft } from "react-icons/fa";
@@ -21,7 +22,7 @@ const WorkoutDetails = () => {
 
     return (
         <div className="m-5">
-            <NavLink to={`/workouts${search}`} className="flex items-center gap-2 text-gray-700 hover:text-blue-500 transition dark:text-white">
+            <NavLink to={`/${search}`} className="flex items-center gap-2 text-gray-700 hover:text-blue-500 transition dark:text-white">
             <FaArrowLeft className="w-6 h-6" />
             <span className="font-bold text-xl">Back to Dashboard</span>
             </NavLink>
@@ -31,20 +32,9 @@ const WorkoutDetails = () => {
             <img src={workout.imagePath} alt={workout.name} className="w-full h-auto object-cover object-center rounded mb-3" />
             <p className="mb-2 mt-6 text-lg font-bold">{workout.description}</p>
             <p className="mb-2 font-bold text-lg">Type: {workout.type.toLocaleUpperCase()}</p>
-            <div className="mb-2">
-                <span className="font-bold text-lg">Logs:</span>
-                <ul className="list-disc ml-6 text-lg font-semibold">
-                    {workout.logs.map((log, idx) => (
-                        <li key={idx}>
-                            {Object.entries(log).map(([key, value]) => (
-                                <span key={key} className="mr-2">{key}: {value} |</span>
-                            ))}
-                        </li>
-                    ))}
-                </ul>
-                </div>
+            
 
-                <button onClick={() => navigate(`/workouts/${workout.id}/logs${search}`)} className="cursor-pointer flex font-semibold place-self-center m-5 bg-red-600 p-2 rounded-2xl w-50 justify-center shadow-md border transform hover:scale-110 bg-red-700  duration-300 dark:text-white">
+                <button onClick={() => navigate(`/workouts/${workout.id}/logs${search}`)} className="cursor-pointer flex font-semibold place-self-center m-5 bg-red-600 dark:text-white p-2 rounded-2xl w-50 justify-center shadow-md border transform hover:scale-110 bg-red-700  duration-300">
                     Start Workout
                     </button>
 

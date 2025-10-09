@@ -6,8 +6,8 @@ const UserTheme = () => {
   const search = location.search || "";
 
   return (
-    <NavLink to={`/profile${search}`}>
-      <span className="text-base font-bold h-10 p-2 rounded-2xl bg-gradient-to-r from-gray-100 to-gray-700 text-black dark:text-white float-right mr-5 font-serif">User Theme</span>
+    <NavLink to={`/profile/${search}`}>
+      <span className="text-base font-bold h-10 p-2 rounded-2xl bg-gradient-to-r from-gray-100 to-gray-700 text-black dark:text-white float-right mr-5 font-serif hover:bg-gradient-to-r hover:from-gray-700 hover:to-gray-100 ">User Theme</span>
     </NavLink>
   )
 }
