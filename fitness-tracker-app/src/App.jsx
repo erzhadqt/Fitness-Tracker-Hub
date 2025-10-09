@@ -22,7 +22,7 @@ function App() {
         });
 
         if (data.length !== workouts.length) {
-        saveWorkouts(data);
+            saveWorkouts(data);
         }
     }, []);
 
