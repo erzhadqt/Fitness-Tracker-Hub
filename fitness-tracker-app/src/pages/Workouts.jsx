@@ -28,37 +28,37 @@ const Workouts = () => {
     }
       
     return (
-      <div className=" p-1 w-auto h-auto">
-          <div className="mt-4 flex  gap-x-5 ml-7">
-            <input className="bg-gray-200 p-2 max-w-200 min-w-150 max-h-10 rounded font-bold" type="text" placeholder='Searh workouts...' value={q} onChange={(e) => updateParam("q", e.target.value)} />
-            <select className="p-2 bg-gray-200 rounded" value={type} onChange={(e) => updateParam("type", e.target.value)}>
+      <div className="w-full h-auto px-4 sm:px-6 lg:px-8">
+        <div className="mt-6 flex flex-col sm:flex-row gap-4 sm:gap-6 items-center">
+          <input 
+            className="w-full sm:w-1/2 lg:w-1/3 bg-gray-100 dark:bg-gray-800 border border-gray-300 dark:border-gray-700 p-2 rounded-lg font-medium text-gray-800 dark:text-gray-200 focus:outline-none focus:ring-2 focus:ring-red-500 transition" type="text" placeholder="Search workouts..." value={q} onChange={(e) => updateParam('q', e.target.value)}/>
+            <select className="w-full sm:w-1/3 lg:w-1/4 bg-gray-100 dark:bg-gray-800 border border-gray-300 dark:border-gray-700 p-2 rounded-lg text-gray-800 dark:text-gray-200 focus:outline-none focus:ring-2 focus:ring-red-500 transition" value={type} onChange={(e) => updateParam('type', e.target.value)}>
               <option value="">Type Of Workout</option>
-              {
-                workoutType.map((wType, index) => (
-                  <option key={index} value={wType.toLowerCase()}>{wType}</option>
-                ))
-              }
-            </select>
-          </div>
-          
-          <ul className="m-4 p-3 h-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
-              {filtered.map((w) => (
-                  <li key={w.id} className="rounded border-2 shadow shadow-black text-center dark:border-white p-5 flex flex-col items-center transform hover:translate-y-[-20px] duration-300">
-                    <img 
-                      src={w.imagePath}
-                      alt="niqqa"
-                      className="w-full h-[300px] object-cover object-center rounded mb-3"
-                    />
 
-                  <NavLink to={`/workouts/${w.id}?${searchParams.toString()}`} className="bg-red-600 p-1 rounded-lg w-full text-center">
-                      <span className="font-bold text-lg dark:text-white">{w.name}</span>
-                      <span className="font-semibold text-base dark:text-white"> ({w.type.toUpperCase()})</span>
-                  </NavLink>
-                </li>
-                
+              {workoutType.map((wType, index) => (
+
+                <option key={index} value={wType.toLowerCase()}>{wType}</option>
               ))}
-          </ul>
-      </div>
+
+            </select>
+            </div>
+
+            <ul className="mt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+              {filtered.map((w) => (
+                <li 
+                  key={w.id} className="rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 shadow-md hover:shadow-lg text-center p-5 flex flex-col items-center transition-transform duration-300 hover:-translate-y-2">
+                  <img
+                    src={w.imagePath}
+                    alt={w.name}
+                    className="w-full h-64 object-cover object-center rounded-lg mb-4"/>
+                  <NavLink to={`/workouts/${w.id}?${searchParams.toString()}`} className="w-full bg-red-600 hover:bg-red-700 text-white py-2 px-4 rounded-lg transition">
+                    <span className="block font-bold text-lg">{w.name}</span>
+                    <span className="block font-medium text-sm">({w.type.toUpperCase()})</span>
+                  </NavLink>
+                  </li>
+                ))}
+                </ul>
+        </div>
     )
 }
 

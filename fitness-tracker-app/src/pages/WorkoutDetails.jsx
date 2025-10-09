@@ -21,27 +21,37 @@ const WorkoutDetails = () => {
     }
 
     return (
-        <div className="m-5">
-            <NavLink to={`/${search}`} className="flex items-center gap-2 text-gray-700 hover:text-blue-500 transition dark:text-white">
-            <FaArrowLeft className="w-6 h-6" />
-            <span className="font-bold text-xl">Back to Dashboard</span>
+        <div className="w-full px-4 sm:px-6 lg:px-8 my-6">
+            <NavLink to={`/${search}`} className="flex items-center gap-2 text-gray-700 dark:text-gray-200 hover:text-blue-500 transition-colors duration-200">
+                <FaArrowLeft className="w-5 h-5 sm:w-6 sm:h-6" />
+                <span className="font-semibold text-lg sm:text-xl">Back to Dashboard</span>
             </NavLink>
 
-            <div className="m-4 p-5 mx-auto mt-10 h-auto w-220 bg-zinc-300 rounded border-solid  shadow">
-                <h2 className="font-bold text-3xl mb-8">{workout.name}</h2>
-            <img src={workout.imagePath} alt={workout.name} className="w-full h-auto object-cover object-center rounded mb-3" />
-            <p className="mb-2 mt-6 text-lg font-bold">{workout.description}</p>
-            <p className="mb-2 font-bold text-lg">Type: {workout.type.toLocaleUpperCase()}</p>
-            
+            <div className="mt-8 mx-auto max-w-2xl bg-gray-100 dark:bg-gray-800 rounded-xl shadow-md p-6 sm:p-8 border border-gray-200 dark:border-gray-700">
+                <h2 className="font-heading font-bold text-2xl sm:text-3xl mb-6 text-gray-900 dark:text-white">
+                    {workout.name}
+                </h2>
 
-                <button onClick={() => navigate(`/workouts/${workout.id}/logs${search}`)} className="cursor-pointer flex font-semibold place-self-center m-5 bg-red-600 dark:text-white p-2 rounded-2xl w-50 justify-center shadow-md border transform hover:scale-110 bg-red-700  duration-300">
+                <img 
+                    src={workout.imagePath} 
+                    alt={workout.name} 
+                    className="w-full h-64 sm:h-80 object-cover object-center rounded-lg mb-6"/>
+
+                <p className="text-lg font-medium text-gray-800 dark:text-gray-200 mb-4">
+                    {workout.description}
+                </p>
+
+                <p className="text-lg font-semibold text-gray-900 dark:text-gray-100 mb-6">
+                    Type: {workout.type.toUpperCase()}
+                </p>
+
+                <button onClick={() => navigate(`/workouts/${workout.id}/logs${search}`)} className="w-full sm:w-auto px-6 py-3 bg-red-600 hover:bg-red-700 text-white font-semibold rounded-xl shadow-md transition-transform duration-300 transform hover:scale-105 mx-auto">
                     Start Workout
-                    </button>
-
+                </button>
 
             </div>
 
-            <Outlet/>
+            <Outlet />
         </div>
     )
 }
