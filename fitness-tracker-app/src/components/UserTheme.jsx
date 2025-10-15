@@ -1,5 +1,6 @@
 import React from 'react'
 import { NavLink, useLocation } from "react-router-dom";
+import { FaUser } from "react-icons/fa";
 
 const UserTheme = () => {
   const location = useLocation();
@@ -7,7 +8,9 @@ const UserTheme = () => {
 
   return (
     <NavLink to={`/profile/${search}`}>
-      <span className="text-base font-bold h-10 p-2 rounded-2xl bg-gradient-to-r from-gray-100 to-gray-700 text-black dark:text-white float-right mr-5 font-serif hover:bg-gradient-to-r hover:from-gray-700 hover:to-gray-100 ">User Theme</span>
+      <div className="p-2 bg-gray-200 dark:bg-gray-700 rounded-full">
+        <FaUser className="w-6 h-6 text-gray-800 dark:text-gray-200" />
+      </div>
     </NavLink>
   )
 }

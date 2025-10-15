@@ -35,7 +35,7 @@ function App() {
                 <Route path="/workouts/:id" element={<WorkoutDetails />}>
                     <Route path="logs" element={<WorkoutLogs />} />
                 </Route>
-                <Route path="/profile" element={<Profile userTheme="Dark or Light Mode?" />}></Route>
+                <Route path="/profile" element={<Profile />}></Route>
                 
             </Routes>
         </>

@@ -35,7 +35,7 @@ const WorkoutDetails = () => {
                 <img 
                     src={workout.imagePath} 
                     alt={workout.name} 
-                    className="w-full h-64 sm:h-80 object-cover object-center rounded-lg mb-6"/>
+                    className="w-full h-64 sm:h-80 object-cover object-top rounded-lg mb-6"/>
 
                 <p className="text-lg font-medium text-gray-800 dark:text-gray-200 mb-4">
                     {workout.description}
