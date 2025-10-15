@@ -1,5 +1,4 @@
 import React from 'react'
-import Dashboard from './Dashboard';
 import { useParams, Outlet, useLocation } from 'react-router-dom'
 import { WorkoutData } from '../data/WorkoutData'
 import { FaArrowLeft } from "react-icons/fa";
