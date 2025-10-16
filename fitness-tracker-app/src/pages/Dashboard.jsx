@@ -9,7 +9,7 @@ const Dashboard = ({ title }) => {
       </h1>
 
       <p className="font-body text-base sm:text-lg md:text-xl text-gray-800 dark:text-gray-300 italic mb-6 max-w-2xl">
-        “They don't know you, son!”
+        “They don't know you, son! Who's gonna carry the boat?”
       </p>
       
       <Workouts />

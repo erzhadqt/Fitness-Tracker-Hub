@@ -28,10 +28,10 @@ const Profile = ({ userName, setUserName }) => {
 
         <div className="flex justify-center mt-5">
           <button className="m-3 p-3 rounded-full bg-gray-200 dark:bg-gray-900 transition hover:scale-105">
-            <FaSun className="text-yellow-400" size={22} />
+            <FaSun className="text-yellow-400 dark:text-yellow-200" size={22} />
           </button>
-          <button className="m-3 p-3 rounded-full bg-gray-600 dark:bg-gray-700 transition hover:scale-105">
-            <FaMoon className="text-gray-200" size={22} />
+          <button className="m-3 p-3 rounded-full bg-gray-700 dark:bg-gray-700 transition hover:scale-105">
+            <FaMoon className="text-gray-900 dark:text-gray-100" size={22} />
           </button>
         </div>
       </div>
